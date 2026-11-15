@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD-Persons - Etape 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="table_container">
+        <div id="form_container">
+            <label>Nom: <input type="text" id="input_nom"></label>
+            <label>Prenom: <input type="text" id="input_prenom"></label>
+            <label>Points: <input type="number" id="input_points"></label>
+            <button onclick="ajouterPersonne()">Ajouter</button>
+        </div>
+        <table id="table_persons">
+            <tr>
+                <th>N°</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Points</th>
+                <th>Select</th>
+            </tr>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="col_number" id="row_count">0 ligne(s)</td>
+                    <td class="col_number" id="total_points">Total point(s) = 0</td>
+                </tr>
+            </tfoot>
+        </table>
+        <button onclick="consoleTableau()">Console Tableau</button>
+        <button onclick="doDeleteRows()">Supprimer</button>
+        <script src="script.js"> </script>
+    </div>
+</body>
+
+</html>
