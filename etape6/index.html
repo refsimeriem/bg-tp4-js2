@@ -3,37 +3,54 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>CRUD-Persons - Etape 1</title>
+    <title>CRUD-Persons - Etape 6</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div id="table_container">
+
         <div id="form_container">
-            <label>Nom: <input type="text" id="input_nom"></label>
-            <label>Prenom: <input type="text" id="input_prenom"></label>
-            <label>Points: <input type="number" id="input_points"></label>
-            <button onclick="ajouterPersonne()">Ajouter</button>
+            <label for="input_nom">Nom:</label>
+            <input type="text" id="input_nom">
+
+            <label for="input_prenom">Prénom:</label>
+            <input type="text" id="input_prenom">
+
+            <label for="input_points">Points:</label>
+            <input type="number" id="input_points">
+
+            <button class="btn-add" onclick="ajouterPersonne()">Ajouter</button>
         </div>
+
         <table id="table_persons">
-            <tr>
-                <th>N°</th>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Points</th>
-                <th>Select</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th class="col_number">N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Points</th>
+                    <th class="col_chkbox">Select</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="4" class="col_number" id="row_count">0 ligne(s)</td>
-                    <td class="col_number" id="total_points">Total point(s) = 0</td>
+                    <td colspan="3" id="row_count">0 ligne(s)</td>
+                    <td colspan="2" id="total_points" class="total-cell">Total point(s)= 0</td>
                 </tr>
             </tfoot>
         </table>
-        <button onclick="consoleTableau()">Console Tableau</button>
-        <button onclick="doDeleteRows()">Supprimer</button>
-        <script src="script.js"> </script>
+
+        <div id="container_btn">
+            <button class="btn-consol" onclick="consoleTableau()">Console Tableau</button>
+            <button class="btn-del" onclick="doDeleteRows()">Supprimer</button>
+        </div>
+
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
