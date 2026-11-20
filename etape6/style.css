@@ -47,8 +47,50 @@ td {
 }
 
 tfoot td {
-    font-weight: bold;
+    border: none;
+    font-weight: normal;
     background-color: #f2f2f2;
-    text-align: left;
     padding: 10px;
+    color: gray;
+
+}
+
+#container_btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    padding: 8px 12px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-add {
+    background-color: #28a745;
+}
+
+.btn-consol {
+    background-color: #e9a03a;
+    margin-right: 10px;
+}
+
+.btn-del {
+    background-color: #dc3545;
+}
+
+#row_count {
+    text-align: left;
+}
+
+.total-cell {
+    text-align: left;
+}
+
+.total-cell {
+    text-align: right;
 }
